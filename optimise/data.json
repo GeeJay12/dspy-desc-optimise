@@ -1,0 +1,204 @@
+{
+    "data" : [
+        {
+          "context": "My vision has become blurry, and I've lost a lot of weight despite eating normally.",
+          "truth": "Diabetes"
+        },
+        {
+          "context": "I've been feeling confused lately and my skin looks yellowish.",
+          "truth": "Liver Cirrhosis"
+        },
+        {
+          "context": "I get panic attacks where my heart races and I feel like I can't breathe.",
+          "truth": "Anxiety Disorder"
+        },
+        {
+          "context": "Sometimes, I wake up in the middle of the night wheezing and coughing.",
+          "truth": "Asthma"
+        },
+        {
+          "context": "There are scaly red patches on my elbows and scalp that itch a lot.",
+          "truth": "Psoriasis"
+        },
+        {
+          "context": "I feel tired all the time and my legs and ankles are swollen.",
+          "truth": "Chronic Kidney Disease"
+        },
+        {
+          "context": "It hurts to breathe deeply and I feel exhausted just walking a few steps.",
+          "truth": "Pneumonia"
+        },
+        {
+          "context": "I feel tired all the time and my legs and ankles are swollen.",
+          "truth": "Chronic Kidney Disease"
+        },
+        {
+          "context": "My skin gets thick and silvery in certain spots and is hard to treat.",
+          "truth": "Psoriasis"
+        },
+        {
+          "context": "I get short of breath easily and my skin looks paler than usual.",
+          "truth": "Anemia"
+        },
+        {
+          "context": "I feel tired all the time and my legs and ankles are swollen.",
+          "truth": "Chronic Kidney Disease"
+        },
+        {
+          "context": "There are scaly red patches on my elbows and scalp that itch a lot.",
+          "truth": "Psoriasis"
+        },
+        {
+          "context": "It hurts to breathe deeply and I feel exhausted just walking a few steps.",
+          "truth": "Pneumonia"
+        },
+        {
+          "context": "My cough has been lasting for weeks and I bring up a lot of mucus.",
+          "truth": "Bronchitis"
+        },
+        {
+          "context": "There's facial pain and pressure, especially when I bend forward.",
+          "truth": "Sinusitis"
+        },
+        {
+          "context": "I often feel cold and tired, and my skin is very dry.",
+          "truth": "Hypothyroidism"
+        },
+        {
+          "context": "There's a wheezing sound when I breathe and my chest feels tight.",
+          "truth": "Bronchitis"
+        },
+        {
+          "context": "I get a burning pain in my stomach, especially when I'm hungry.",
+          "truth": "Peptic Ulcer"
+        },
+        {
+          "context": "Sometimes I blank out for a few seconds and don't remember what happened.",
+          "truth": "Epilepsy"
+        },
+        {
+          "context": "I have trouble hearing and a feeling of fullness in one ear.",
+          "truth": "Otitis Media"
+        },
+        {
+          "context": "I get a burning pain in my stomach, especially when I'm hungry.",
+          "truth": "Peptic Ulcer"
+        },
+        {
+          "context": "I get rashes that flare up with certain soaps and detergents.",
+          "truth": "Dermatitis"
+        },
+        {
+          "context": "It burns when I urinate and I feel like I have to go all the time.",
+          "truth": "Urinary Tract Infection"
+        },
+        {
+          "context": "I constantly feel nervous and have trouble concentrating on anything.",
+          "truth": "Anxiety Disorder"
+        },
+        {
+          "context": "The discomfort gets better after eating or taking antacids.",
+          "truth": "Peptic Ulcer"
+        },
+        {
+          "context": "My skin is red, itchy, and has started to flake off.",
+          "truth": "Dermatitis"
+        },
+        {
+          "context": "There are scaly red patches on my elbows and scalp that itch a lot.",
+          "truth": "Psoriasis"
+        },
+        {
+          "context": "I constantly feel nervous and have trouble concentrating on anything.",
+          "truth": "Anxiety Disorder"
+        },
+        {
+          "context": "My skin gets thick and silvery in certain spots and is hard to treat.",
+          "truth": "Psoriasis"
+        },
+        {
+          "context": "My urine smells strange and looks cloudy.",
+          "truth": "Urinary Tract Infection"
+        },
+        {
+          "context": "I feel tired all the time, even after a full night's sleep, and sometimes I feel dizzy.",
+          "truth": "Anemia"
+        },
+        {
+          "context": "I've been losing weight rapidly and my hands tremble.",
+          "truth": "Hyperthyroidism"
+        },
+        {
+          "context": "I feel tired all the time, even after a full night's sleep, and sometimes I feel dizzy.",
+          "truth": "Anemia"
+        },
+        {
+          "context": "My urine smells strange and looks cloudy.",
+          "truth": "Urinary Tract Infection"
+        },
+        {
+          "context": "I have trouble sleeping and feel tired and worthless all the time.",
+          "truth": "Depression"
+        },
+        {
+          "context": "I'm gaining weight even though I haven't changed my eating habits.",
+          "truth": "Hypothyroidism"
+        },
+        {
+          "context": "I get rashes that flare up with certain soaps and detergents.",
+          "truth": "Dermatitis"
+        },
+        {
+          "context": "I've been coughing up blood and losing weight without trying.",
+          "truth": "Tuberculosis"
+        },
+        {
+          "context": "There are scaly red patches on my elbows and scalp that itch a lot.",
+          "truth": "Psoriasis"
+        },
+        {
+          "context": "My skin gets thick and silvery in certain spots and is hard to treat.",
+          "truth": "Psoriasis"
+        },
+        {
+          "context": "I get short of breath easily and my skin looks paler than usual.",
+          "truth": "Anemia"
+        },
+        {
+          "context": "I get rashes that flare up with certain soaps and detergents.",
+          "truth": "Dermatitis"
+        },
+        {
+          "context": "Sometimes, I wake up in the middle of the night wheezing and coughing.",
+          "truth": "Asthma"
+        },
+        {
+          "context": "My cough has been lasting for weeks and I bring up a lot of mucus.",
+          "truth": "Bronchitis"
+        },
+        {
+          "context": "Sometimes I blank out for a few seconds and don't remember what happened.",
+          "truth": "Epilepsy"
+        },
+        {
+          "context": "It hurts to breathe deeply and I feel exhausted just walking a few steps.",
+          "truth": "Pneumonia"
+        },
+        {
+          "context": "I've had diarrhea and vomiting for two days, along with stomach cramps.",
+          "truth": "Gastroenteritis"
+        },
+        {
+          "context": "I've lost interest in things I used to enjoy and feel hopeless most days.",
+          "truth": "Depression"
+        },
+        {
+          "context": "I've had multiple seizures where I lose consciousness and shake uncontrollably.",
+          "truth": "Epilepsy"
+        },
+        {
+          "context": "My ear hurts and I've had some fluid draining from it.",
+          "truth": "Otitis Media"
+        }
+      ]
+}

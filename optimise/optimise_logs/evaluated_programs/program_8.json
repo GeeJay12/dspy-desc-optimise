@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Derive the appropriate illness from the context",
+      "fields": [
+        {
+          "prefix": "Symptom Context:",
+          "description": "Patient's description of their symptoms."
+        },
+        {
+          "prefix": "Extracted Illness:",
+          "description": "The name of the medically relevant illness."
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.11",
+      "dspy": "2.6.24",
+      "cloudpickle": "3.1"
+    }
+  }
+}
