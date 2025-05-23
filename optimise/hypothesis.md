@@ -2,13 +2,67 @@
 
 This document outlines the hypothesis and methodology for using the DSPy framework to optimize the `description` strings within Pydantic schema fields. The goal is to improve the accuracy of Large Language Models (LLMs) in extracting structured data from text, particularly when these descriptions guide the LLM.
 
-## 1. Core Hypothesis
+## 1. Example: Pydantic Schema Before and After Optimization
+
+To make the concept more concrete, let's look at how the Pydantic schema for `IllnessExtraction` might change before readers dive into the details of the hypothesis and methodology.
+
+### Schema Before Optimization
+
+This is the initial Pydantic class definition from the Python script, with the original description for the `illness` field:
+
+```python
+from pydantic import BaseModel, Field
+from enum import Enum
+
+class Illness(str, Enum):
+    DIABETES = "Diabetes"
+    LIVER_CIRRHOSIS = "Liver Cirrhosis"
+    # ... (other illness enum members)
+    GASTROENTERITIS = "Gastroenteritis"
+
+class IllnessExtraction(BaseModel):
+    """Schema for extracting illness information."""
+
+    illness: Illness = Field(
+        description="Derive the appropriate illness from the context" # <-- Original description
+    )
+```
+
+### Schema After Optimization (Conceptual)
+
+After running the DSPy optimization script (`optimise_illness_description.py`), the script will output an "Optimized Instruction." Let's assume, for example, that DSPy found the following hypothetical instruction to be more effective:
+
+`"Based on the patient's reported symptoms, identify and extract the single most likely medical illness. Focus on primary conditions, not secondary symptoms. Choose from the predefined list of illnesses."`
+
+You would then manually (or programmatically) update your Pydantic schema in your primary application code like this:
+
+```python
+from pydantic import BaseModel, Field
+from enum import Enum
+
+class Illness(str, Enum):
+    DIABETES = "Diabetes"
+    LIVER_CIRRHOSIS = "Liver Cirrhosis"
+    # ... (other illness enum members)
+    GASTROENTERITIS = "Gastroenteritis"
+
+class IllnessExtraction(BaseModel):
+    """Schema for extracting illness information."""
+
+    illness: Illness = Field(
+        description="Based on the patient's reported symptoms, identify and extract the single most likely medical illness. Focus on primary conditions, not secondary symptoms. Choose from the predefined list of illnesses." # <-- Hypothetical optimized description
+    )
+```
+
+The DSPy script itself doesn't modify your source Pydantic schema files directly. It provides you with the optimized string, which you then use to update your schemas.
+
+## 2. Core Hypothesis
 
 **We hypothesize that by treating Pydantic field descriptions as optimizable instructions, DSPy can systematically refine these descriptions to significantly enhance the accuracy and reliability of LLM-based data extraction.**
 
 Instead of manually iterating on prompt phrasing for each field, DSPy's optimizers can automate this process, leading to more effective guidance for the LLM.
 
-## 2. Why DSPy?
+## 3. Why DSPy?
 
 DSPy was chosen for this task due to its core capabilities:
 
@@ -16,7 +70,7 @@ DSPy was chosen for this task due to its core capabilities:
 *   **Signatures**: Clearly define the input/output behavior of an LLM task, where instructions (our Pydantic descriptions) are a key component.
 *   **Optimizers (Teleprompters)**: Algorithms like `MIPROv2` can automatically tune prompts (including instructions) and even few-shot examples based on a defined metric and a training dataset. This is the cornerstone of our approach.
 
-## 3. Methodology
+## 4. Methodology
 
 The proposed methodology involves the following steps:
 
@@ -34,7 +88,7 @@ The proposed methodology involves the following steps:
 7.  **Extracting Optimized Description**: After the optimization process, the refined instruction is extracted from the optimized DSPy module. This new instruction is the "optimized Pydantic description."
 8.  **Integration**: This optimized description is then manually or programmatically updated in the original Pydantic schema, which is used in the primary data extraction pipeline (e.g., with Google's GenAI SDK).
 
-## 4. Key Decisions & Assumptions
+## 5. Key Decisions & Assumptions
 
 *   **Optimizer Choice (`MIPROv2`)**:
     *   Chosen for its advanced capabilities in generating and refining instructions directly.
@@ -48,14 +102,14 @@ The proposed methodology involves the following steps:
 *   **Iterative Refinement**: The process is designed to be iterative. As new annotated data becomes available or if extraction accuracy degrades, the optimization process can be re-run to further refine descriptions.
 *   **Initial Description as Seed**: The existing Pydantic description provides a starting point for the optimizer, guiding its initial search.
 
-## 5. Script Workflow Diagram
+## 6. Script Workflow Diagram
 
 The `optimise_illness_description.py` script follows this general flow:
 
 ```mermaid
 graph TD
-    A[Load Training Data #40;data.json: context, truth#41;] --> B{Pydantic Schema};
-    B -- Initial Description --> C[Setup DSPy Module #40;IllnessExtractorModule + SymptomToIllnessSignature#41;];
+    A[Load Training Data (data.json: context, truth)] --> B{Pydantic Schema};
+    B -- Initial Description --> C[Setup DSPy Module (IllnessExtractorModule + SymptomToIllnessSignature)];
     C --> D{Optimizer: MIPROv2};
     A --> E[Metric: simple_exact_match_metric];
     E --> D;
@@ -84,7 +138,7 @@ graph TD
 
 This approach provides a data-driven and systematic way to enhance the guiding descriptions in Pydantic schemas, aiming for better LLM performance in structured data extraction tasks.
 
-## 6. Setup and Execution
+## 7. Setup and Execution
 
 This section details how to set up the environment and run the `optimise_illness_description.py` script.
 
