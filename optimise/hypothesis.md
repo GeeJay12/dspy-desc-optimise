@@ -64,12 +64,12 @@ graph TD
     G -- Extract Optimized Instruction --> H[Optimized Description String];
     H --> I[Output: Log & Save Optimized Description/Program];
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#f9f,stroke:#333,stroke-width:2px
-    style E fill:#f9f,stroke:#333,stroke-width:2px
-    style F fill:#lightgrey,stroke:#333,stroke-width:2px
-    style I fill:#ccf,stroke:#333,stroke-width:2px
-    style H fill:#ccf,stroke:#333,stroke-width:2px
+    style A fill:#EFE,stroke:#fff,stroke-width:2px
+    style B fill:#EFE,stroke:#fff,stroke-width:2px
+    style E fill:#EFE,stroke:#fff,stroke-width:2px
+    style F fill:#lightgrey,stroke:#fff,stroke-width:2px
+    style I fill:#EEF,stroke:#fff,stroke-width:2px
+    style H fill:#EEF,stroke:#fff,stroke-width:2px
 ```
 
 **Explanation of Diagram:**
