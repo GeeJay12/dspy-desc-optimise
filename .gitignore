@@ -1,0 +1,8 @@
+.venv
+.venv/*
+optimise/.envrc
+/optimise/documents/epc_files
+/optimise/documents/ground_truth
+/optimise/optimise_logs_epc_valid_until_full_eval
+/optimise/optimise_logs_epc_valid_until_full
+/optimise/optimise_logs_epc_valid_until
