@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Analyze the provided energy performance certificate (EPC) images. Find and extract the numerical value explicitly labeled 'Endenergiebedarf'. It is crucial that you ONLY extract the 'Endenergiebedarf' value and NOT the value labeled 'Endenergieverbrauch'. Return the extracted number as a floating-point number. If the 'Endenergiebedarf' value is not found in any of the images, return 0.0.",
+      "fields": [
+        {
+          "prefix": "Epc Context:",
+          "description": "\n        The context of the energy performance certificate (EPC).\n        This includes the property address, the energy performance rating, and any other relevant information.\n        "
+        },
+        {
+          "prefix": "Final Energy Demand Of Building:",
+          "description": "\n            Endenergiebedarf.\n            This refers to the final energy demand of the building.\n            Do not extract the (Endenergieverbrauch) value of final energy consumption of the building.\n            If the value is not present, return 0.0.\n        "
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.11",
+      "dspy": "2.6.24",
+      "cloudpickle": "3.1"
+    }
+  }
+}

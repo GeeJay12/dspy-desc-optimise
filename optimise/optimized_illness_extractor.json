@@ -4,15 +4,15 @@
     "train": [],
     "demos": [],
     "signature": {
-      "instructions": "Derive the appropriate illness from the context",
+      "instructions": "Analyze the provided images of the Energy Performance Certificate (EPC). Your task is to identify the precise date on which the certificate's validity expires. Extract this date and present it strictly in the YYYY-MM-DD format.",
       "fields": [
         {
-          "prefix": "Symptom Context:",
-          "description": "Patient's description of their symptoms."
+          "prefix": "Epc Context:",
+          "description": "\n        The context of the energy performance certificate (EPC).\n        This includes the property address, the energy performance rating, and any other relevant information.\n        "
         },
         {
-          "prefix": "Extracted Illness:",
-          "description": "The name of the medically relevant illness."
+          "prefix": "Certificate Valid Until Date:",
+          "description": "\n        Extract the date until which the energy performance certificate (EPC) is valid.\n        Format: YYYY-MM-DD\n        "
         }
       ]
     },
